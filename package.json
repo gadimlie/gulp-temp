@@ -19,7 +19,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-shorthand": "^1.1.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.4.0"
+    "jquery": "^3.4.0",
+    "owl.carousel": "^2.3.4"
   },
   "description": "",
   "dependencies": {
