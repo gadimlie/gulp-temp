@@ -1,16 +1,22 @@
 body {
-  font-family: sans-serif; }
+  font: 36px sans-serif;
+}
 
 div {
   color: #7e7e7e;
   width: 400px;
   margin: 250px auto;
-  text-align: center; }
-  div h1 {
-    font-size: 36px;
-    margin-bottom: 0; }
-  div p {
-    margin-bottom: 30px; }
+  text-align: center;
+}
+
+div h1 {
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+div p {
+  margin-bottom: 30px;
+}
 
 ul {
   list-style: none;
@@ -20,12 +26,16 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 a {
   text-decoration: none;
   color: #7e7e7e;
-  font-size: 18px; }
-  a:hover {
-    text-decoration: none;
-    color: black; }
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}

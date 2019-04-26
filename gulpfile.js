@@ -5,7 +5,8 @@ let gulp = require('gulp'),
     browser = require('browser-sync').create(),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    shorthand = require('gulp-shorthand');
 
 
 function _pug() {
@@ -26,6 +27,7 @@ function _sass() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(shorthand())
         .pipe(gulp.dest('./public/css'))
         .pipe(browser.reload({stream: true}))
     
