@@ -14,7 +14,6 @@ function _pug() {
         .pipe(pug({
                 pretty: true
             }))
-        .on('error',console.log)
         .pipe(gulp.dest('./public'))
         .pipe(browser.reload({stream: true}))
 }
@@ -22,7 +21,6 @@ function _pug() {
 function _sass() {
     return gulp.src('./assets/sass/**/*.+(sass|scss)')
         .pipe(sass())
-        .on('error', console.log)
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
