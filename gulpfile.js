@@ -4,7 +4,8 @@ let gulp = require('gulp'),
     sass = require('gulp-sass'),
     browser = require('browser-sync').create(),
     concat = require('gulp-concat'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    autoprefixer = require('gulp-autoprefixer');
 
 
 function _pug() {
@@ -21,6 +22,10 @@ function _sass() {
     return gulp.src('./assets/sass/**/*.+(sass|scss)')
         .pipe(sass())
         .on('error', console.log)
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('./public/css'))
         .pipe(browser.reload({stream: true}))
     

@@ -11,6 +11,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.5",
     "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
