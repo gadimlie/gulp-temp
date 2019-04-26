@@ -31,7 +31,7 @@ function _sass() {
     
 }
 function _js() {
-    return gulp.src(['./assets/js/**/*.js', '!./assets/js/vendor/**/*.js'])
+    return gulp.src([ './assets/js/includes/**/*.js', './assets/js/*.js'])
         .pipe(concat('index.js')) 
         .pipe(gulp.dest('./public/js'))
         .pipe(browser.reload({stream: true})) 
@@ -52,18 +52,18 @@ function watch() {
             baseDir: './public'
         }
     });
-    
-    gulp.watch('assets/sass/**/*.sass', _sass);
     gulp.watch('assets/template/**/*.pug', _pug);
-    gulp.watch('assets/img/**/*', _img);
     gulp.watch('assets/js/**/*', _js);
+    gulp.watch('assets/sass/**/*.sass', _sass);
+    gulp.watch('assets/img/**/*', _img);
+    
     
 }
 
 
 
 exports.default = gulp.parallel(
-    gulp.series(_pug, _sass, _js, _img),
+    gulp.series(_pug, _js, _sass, _img),
     watch
 );
 

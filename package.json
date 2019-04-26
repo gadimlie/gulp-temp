@@ -8,7 +8,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.5",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
@@ -22,5 +21,9 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.4.0"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "owl.carousel": "^2.3.4"
+  }
 }
