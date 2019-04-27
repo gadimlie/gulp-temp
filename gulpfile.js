@@ -31,7 +31,7 @@ function _sass() {
     
 }
 function _js() {
-    return gulp.src(['./assets/js/includes/_jquery.min.js', './assets/js/includes/_owl.carousel.min.js','./assets/js/index.js']])
+    return gulp.src(['./assets/js/includes/_jquery.min.js', './assets/js/includes/_owl.carousel.min.js','./assets/js/index.js'])
         .pipe(concat('index.js')) 
         .pipe(gulp.dest('./public/js'))
         .pipe(browser.reload({stream: true})) 
